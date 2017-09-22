@@ -113,6 +113,38 @@ body {
     left: 0;
     line-height: 1.3em; }
 
+
+a[href^="#"] { 
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+a[href^="#"] h1[id] {
+  padding-right: .1em;
+  padding-left: .1em;
+}
+
+a[href^="#"], 
+a[href^="#"]:hover {
+  color: inherit;
+}
+
+a[href^="#"]:hover:before {
+  opacity: 1;
+}
+
+a[href^="#"]:before {
+  content: '#';
+  position: absolute;
+  top: 0;
+  right: 100%;
+  font-size: 2em;
+  font-family: 'Dancing Script', cursive;
+  opacity: 0;
+  transition: opacity .25s;
+}
+
 .home {
   width: 100%;
   position: relative;
